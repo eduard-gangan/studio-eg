@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.clip {
+	clip-path: polygon(
+		100% 100%,
+		0% 100%,
+		0% 160px,
+		45% 160px,
+		55% 128px,
+		100% 128px
+	);
+}
+.clip-parent::before {
+	/* height is 164px */
+	clip-path: polygon(
+		100% 132px,
+		calc(55% + 4px) 132px,
+		calc(45% + 4px) 100%,
+		0% 100%,
+		0% 160px,
+		45% 160px,
+		55% 128px,
+		100% 128px
+	);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.work {
+	clip-path: polygon(100% 100%, 30% 100%, 20% 100%, 0% 100%, 0% 0%, 100% 0%);
+	transition: clip-path 500ms ease;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.work:hover {
+	clip-path: polygon(100% 70%, 25% 70%, 10% 100%, 0% 100%, 0% 0%, 100% 0%);
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.work:hover ~ div h3 {
+	opacity: 1;
+	transform: translateX(0);
+}
+.work:hover ~ div p {
+	opacity: 1;
+	transform: translateX(0);
+}
+@layer components {
 }
