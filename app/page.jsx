@@ -13,7 +13,7 @@ const data = [
 	{
 		img: "abstract1.jpg",
 		heading: "UI & UX design",
-		text: "We blend creativity and strategy to reflect your brand’s essence, ensuring a memorable and cohesive presence across all touchpoints. Let your brand shine and leave a lasting impression.",
+		text: "We blend creativity and strategy to reflect your brand’s essence, ensuring a memorable and cohesive presence across all touchpoints. Let your brand shine and leave a lasting impression. ",
 	},
 	{
 		img: "abstract2.jpg",
