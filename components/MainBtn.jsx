@@ -12,8 +12,8 @@ const MainBtn = (props) => {
 			<img
 				src="/assets/svg/arrow.svg"
 				alt="arrow pointing to the right"
-				height={48}
-				width={48}
+				height={64}
+				width={64}
 			/>
 		</Link>
 	);

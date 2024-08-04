@@ -27,24 +27,23 @@ const data = [
 	},
 ];
 
-const works = [
+const socials = [
 	{
-		img: "abstract3.jpg",
+		title: "Github",
 	},
 	{
-		img: "abstract3.jpg",
+		title: "X",
 	},
 	{
-		img: "abstract3.jpg",
+		title: "Instagram",
 	},
 	{
-		img: "abstract3.jpg",
+		title: "Dribble",
 	},
 	{
-		img: "abstract3.jpg",
+		title: "LinkedIn",
 	},
 ];
-
 export default function Home() {
 	const main = useRef();
 
@@ -285,6 +284,44 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			<section className="min-h-screen mt-32">
+				<h2 className=" text-transparent m-6 lg:m-24 text-zinc-100 leading-[1.1] ">
+					<div className="font-heading tracking-wider uppercase text-9xl lg:text-10xl text-flip">
+						Have an
+					</div>
+					<div className=" flex items-center">
+						<span className="font-heading text-zinc-100 tracking-wider uppercase text-9xl lg:text-10xl text-flip">
+							Idea ?
+						</span>
+						<div className="text-5xl lg:text-7xl font-black font-sans text-fuchsia-200 ml-8">
+							<p className="text-flip">Let's</p>
+							<p className="text-flip">Connect</p>
+						</div>
+					</div>
+				</h2>
+
+				<div className="mt-16">
+					{socials.map((el, i) => {
+						return (
+							<Link
+								key={i}
+								href="/"
+								className="w-full border-t-2 border-zinc-800 last:border-b-2 text-2xl text-zinc-300 py-6 px-12 flex items-center relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-zinc-200 before: before:text-zinc-900 z-0 before:-z-10 before:scale-y-0 before:origin-bottom hover:before:scale-y-100 before:transition-transform before:duration-500 hover:before:origin-top transition-all hover:border-zinc-300 hover:text-zinc-800 hover:px-16 duration-300 group"
+							>
+								{el.title}
+								<img
+									src="/assets/svg/arrow.svg"
+									alt="two arrows pointing to the right"
+									width={48}
+									height={48}
+									className="ml-auto group-hover:invert transition-all duration-300"
+								/>
+							</Link>
+						);
+					})}
 				</div>
 			</section>
 		</main>
