@@ -6,19 +6,20 @@ import {
 	OrbitControls,
 	PerspectiveCamera,
 	Float,
+	useProgress,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Model } from "./Model";
 
-const ModelView = (props) => {
+const ModelView = ({ width, height, setprogress }) => {
+	const { progress } = useProgress();
+	setprogress(progress);
 	return (
 		<Canvas
 			style={{
-				height: props.height,
-				width: props.width,
-				position: "absolute",
-				right: 0,
+				height: height,
+				width: width,
 			}}
 			shadows="basic"
 		>
