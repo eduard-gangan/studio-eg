@@ -343,7 +343,7 @@ export default function Home() {
 							<Link
 								key={i}
 								href="/"
-								className="w-full border-t-2 last:border-b-2 border-zinc-800 text-2xl text-zinc-300 py-6 px-12 flex items-center relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-zinc-200 before: before:text-zinc-900 z-0 before:-z-10 before:scale-y-0 before:origin-bottom hover:before:scale-y-100 before:transition-transform before:duration-500 hover:before:origin-top transition-all hover:border-zinc-300 hover:text-zinc-800 hover:px-16 duration-300 group"
+								className="w-full border-t-2 last:border-b-2 border-zinc-800 text-2xl text-zinc-300 py-6 px-6 sm:px-12 flex items-center relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-zinc-200 before: before:text-zinc-900 z-0 before:-z-10 before:scale-y-0 before:origin-bottom hover:before:scale-y-100 before:transition-transform before:duration-500 hover:before:origin-top transition-all hover:border-zinc-300 hover:text-zinc-800 hover:px-12 sm:hover:px-16 duration-300 group"
 							>
 								{el.title}
 								<img
