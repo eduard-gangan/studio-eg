@@ -69,6 +69,19 @@ export default function Home() {
 						},
 					});
 				});
+
+				const works = gsap.utils.toArray(".work");
+				works.forEach((el, i) => {
+					gsap.to(el, {
+						backgroundPositionY: "100%",
+						scrollTrigger: {
+							trigger: el,
+							start: "top bottom",
+							end: "bottom top",
+							scrub: true,
+						},
+					});
+				});
 			});
 
 			const flipText = gsap.utils.toArray(".text-flip");
@@ -88,18 +101,6 @@ export default function Home() {
 				});
 			});
 
-			const works = gsap.utils.toArray(".work");
-			works.forEach((el, i) => {
-				gsap.to(el, {
-					backgroundPositionY: "100%",
-					scrollTrigger: {
-						trigger: el,
-						start: "top bottom",
-						end: "bottom top",
-						scrub: true,
-					},
-				});
-			});
 			if (window.innerWidth < 768) {
 				setheight("50svh");
 				setwidth("100vw");
@@ -123,11 +124,11 @@ export default function Home() {
 	return (
 		<main
 			ref={main}
-			className="bg-zinc-900"
+			className="bg-zinc-900 overflow-x-hidden"
 		>
 			<Loader progress={progress} />
 			<section className="w-screen h-screen relative grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 z-0">
-				<div className="circle-teal -top-48 max-md:-left-96 md:-right-0 xl:right-48"></div>
+				<div className="circle-teal -top-48 max-md:-left-48 md:-right-0 xl:right-48"></div>
 				<div className="circle-fuchsia -bottom-48 -right-96 md:-right-48 xl:right-0"></div>
 				<img
 					src="/assets/svg/pyramid.svg"
@@ -238,7 +239,7 @@ export default function Home() {
 
 				<div className="grid md:grid-cols-2 gap-8 max-w-5xl mt-24 *:w-full *:aspect-square *:overflow-hidden *:rounded-xl md:even:*:translate-y-1/2 *:grid *:content-end *:relative *:max-w-132">
 					<div className="work-parent">
-						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/asia.jpg')] bg-cover bg-top work z-10 rounded-xl"></div>
+						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/asia.jpg')] bg-cover bg-center md:bg-top work z-10 rounded-xl"></div>
 						<div className="ml-24 sm:ml-48 md:ml-32 lg:ml-40">
 							<h3 className="text-xl sm:text-3xl md:text-2xl lg:text-3xl font-heading text-zinc-200 mb-2 opacity-0 translate-x-8 transition-all duration-500 delay-300 w-full flex">
 								Vintage Vinyl Haven
@@ -253,7 +254,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="work-parent">
-						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/man.jpg')] bg-cover bg-top work z-10 rounded-xl"></div>
+						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/man.jpg')] bg-cover bg-center md:bg-top work z-10 rounded-xl"></div>
 						<div className="ml-24 sm:ml-48 md:ml-32 lg:ml-40">
 							<h3 className="text-xl sm:text-3xl md:text-2xl lg:text-3xl font-heading text-zinc-200 mb-2 opacity-0 translate-x-8 transition-all duration-500 delay-300 w-full flex">
 								Green Threads
@@ -268,7 +269,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="work-parent ">
-						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/paint.jpg')] bg-cover bg-top work z-10 rounded-xl"></div>
+						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/paint.jpg')] bg-cover bg-center md:bg-top work z-10 rounded-xl"></div>
 						<div className="ml-24 sm:ml-48 md:ml-32 lg:ml-40">
 							<h3 className="text-xl sm:text-3xl md:text-2xl lg:text-3xl font-heading text-zinc-200 mb-2 opacity-0 translate-x-8 transition-all duration-500 delay-300 w-full flex">
 								Wanderlust Wonders
@@ -283,7 +284,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="work-parent">
-						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/blob.jpg')] bg-cover bg-top work z-10 rounded-xl"></div>
+						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/blob.jpg')] bg-cover bg-center md:bg-top work z-10 rounded-xl"></div>
 						<div className="ml-24 sm:ml-48 md:ml-32 lg:ml-40">
 							<h3 className="text-xl sm:text-3xl md:text-2xl lg:text-3xl font-heading text-zinc-200 mb-2 opacity-0 translate-x-8 transition-all duration-500 delay-300 w-full flex">
 								Fit Life Goals
@@ -298,7 +299,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="work-parent ">
-						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/abstract2.jpg')] bg-cover bg-top work z-10 rounded-xl"></div>
+						<div className="absolute w-full h-full top-0 left-0 bg-[url('/assets/img/abstract2.jpg')] bg-cover bg-center md:bg-top work z-10 rounded-xl"></div>
 						<div className="ml-24 sm:ml-48 md:ml-32 lg:ml-40">
 							<h3 className="text-xl sm:text-3xl md:text-2xl lg:text-3xl font-heading text-zinc-200 mb-2 opacity-0 translate-x-8 transition-all duration-500 delay-300 w-full flex">
 								Sugarplum Sweets

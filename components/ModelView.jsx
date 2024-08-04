@@ -108,7 +108,10 @@ const ModelView = ({ width, height, setprogress }) => {
 				</mesh> */}
 
 			{/* <Stage preset="upfront"> */}
-			<Float>
+			<Float
+				rotationIntensity={2}
+				floatIntensity={2}
+			>
 				<Suspense
 					fallback={
 						<Html>
